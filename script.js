@@ -62,155 +62,171 @@ function selectOption(option) {
 const textNodes = [
   {
     id: 1,
-    text: 'You wake up in a strange place and you see a jar of blue goo near you',
+    text: "Play an interactive game to learn about various children's rights!",
     options: [
       {
-        text: 'Take the goo',
-        setState: { blueGoo: true },
+        text: 'Start Game',
         nextText: 2
       },
-      {
-        text: 'Leave the goo',
-        setState: { blueGoo: true },
-        nextText: 2
-      }
     ]
   },
   {
     id: 2,
-    text: 'You venture forth in search of answers to where you are when you come across a merchant.',
+    text: 'What right would you want to learn about?',
     options: [
       {
-        text: 'Trade the goo for a sword',
-        requiredState: (currentState) => currentState.blueGoo,
-        setState: { blueGoo: false, sword: true },
+        text: 'Right to Live Free from Violence, \nExploitation, and Abuse',
         nextText: 3
       },
       {
-        text: 'Trade the goo for a shield',
-        requiredState: (currentState) => currentState.blueGoo,
-        setState: { blueGoo: false, shield: true },
-        nextText: 3
+        text: 'Right to Clean Water',
+        nextText: 12
       },
       {
-        text: 'Ignore the merchant',
-        nextText: 3
+        text: 'Right to Immunization',
+        nextText: 0
+      },
+      {
+        text: 'Right to Equity',
+        nextText: 0
+      },
+      {
+        text: 'Right to a Clean Environment',
+        nextText: 0
+      },
+      {
+        text: 'Right to Opportunity',
+        nextText: 0
+      },
+      {
+        text: 'Right to Nutrition',
+        nextText: 0
+      },
+      {
+        text: 'Right to Education',
+        nextText: 0
+      },
+      {
+        text: 'Right to Play',
+        nextText: 0
+      },
+      {
+        text: 'Right to Voice',
+        nextText: 0
+      },
+      {
+        text: 'Right to a Safe Space',
+        nextText: 0
       }
     ]
   },
   {
     id: 3,
-    text: 'After leaving the merchant you start to feel tired and stumble upon a small town next to a dangerous looking castle.',
+    text: "You are playing as Maya, a girl who's parents are constantly arguing. \n Maya: I'm scared at home. My parents fight a lot, and it's getting worse.\n Today my father is shouting at my mother angrily over the dinner she made",
     options: [
       {
-        text: 'Explore the castle',
-        nextText: 4
+        text: '"Try to console your parents calmly"',
+        nextText: 4,
       },
       {
-        text: 'Find a room to sleep at in the town',
-        nextText: 5
+        text: 'Get involved in the fighting and shout at your parents to be quiet"',
+        nextText: 5,
       },
-      {
-        text: 'Find some hay in a stable to sleep in',
-        nextText: 6
-      }
-    ]
+    ],
   },
   {
     id: 4,
-    text: 'You are so tired that you fall asleep while exploring the castle and are killed by some terrible monster in your sleep.',
+    text: 'Your parents feel bad and calm down for now, but this pattern still keeps repeating',
     options: [
       {
-        text: 'Restart',
-        nextText: -1
-      }
-    ]
+        text: 'You try to calm them down everytime"',
+        nextText: 6,
+      },
+      {
+        text: '"You seek external help"',
+        nextText: 7,
+      },
+    ],
   },
   {
     id: 5,
-    text: 'Without any money to buy a room you break into the nearest inn and fall asleep. After a few hours of sleep the owner of the inn finds you and has the town guard lock you in a cell.',
+    text: 'Your parents get angrier and beat you up',
     options: [
       {
         text: 'Restart',
-        nextText: -1
-      }
-    ]
+        nextText: 3,
+      },
+    ],
   },
   {
     id: 6,
-    text: 'You wake up well rested and full of energy ready to explore the nearby castle.',
+    text: 'Your parents get annoyed and tell you not to interfere',
     options: [
       {
-        text: 'Explore the castle',
-        nextText: 7
-      }
-    ]
+        text: 'Restart"',
+        nextText: 3,
+      },
+    ],
   },
+  
   {
     id: 7,
-    text: 'While exploring the castle you come across a horrible monster in your path.',
+    text: 'Choose who you want to get help from',
     options: [
       {
-        text: 'Try to run',
+        text: 'Friends',
         nextText: 8
       },
       {
-        text: 'Attack it with your sword',
-        requiredState: (currentState) => currentState.sword,
+        text: 'Relatives',
         nextText: 9
       },
       {
-        text: 'Hide behind your shield',
-        requiredState: (currentState) => currentState.shield,
+        text: 'School Counsellor',
         nextText: 10
-      },
-      {
-        text: 'Throw the blue goo at it',
-        requiredState: (currentState) => currentState.blueGoo,
-        nextText: 11
       }
     ]
   },
   {
     id: 8,
-    text: 'Your attempts to run are in vain and the monster easily catches.',
+    text: 'You tell your friends. They do not know how to help you',
     options: [
       {
-        text: 'Restart',
-        nextText: -1
+        text: 'Ask someone else for help',
+        nextText: 7
       }
     ]
   },
   {
     id: 9,
-    text: 'You foolishly thought this monster could be slain with a single sword.',
+    text: 'You ask your relatives for help. They tell your parents, but your parents get mad and tell them to mind their business. ',
     options: [
       {
-        text: 'Restart',
-        nextText: -1
+        text: 'Ask someone else for help',
+        nextText: 7
       }
     ]
   },
   {
     id: 10,
-    text: 'The monster laughed as you hid behind your shield and ate you.',
+    text: 'You seek help from your counsellor, a trained professional, who listens to your problems calmly and suggests you to seek professional help.',
     options: [
       {
-        text: 'Restart',
-        nextText: -1
-      }
+        text: 'Listen to her',
+        nextText: 11
+      },
     ]
   },
   {
     id: 11,
-    text: 'You threw your jar of goo at the monster and it exploded. After the dust settled you saw the monster was destroyed. Seeing your victory you decide to claim this castle as your and live out the rest of your days there.',
+    text: 'You and your parents attend counselling, and they learn about the importance of providing their kids a violence-free and safe home.',
     options: [
       {
-        text: 'Congratulations. Play Again.',
-        nextText: -1
+        text: 'End',
+        nextText: 2
       }
     ]
-  }
+  },
 ]
 
 startGame()
