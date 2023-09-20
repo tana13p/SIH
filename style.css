@@ -70,7 +70,7 @@ nav a:hover{
     margin: auto;
     padding: 10px;
     display: inline-block;
-    background-color: #7a7474;
+    background-color: #7c818e;
     border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     margin: 10px;
@@ -82,7 +82,7 @@ nav a:hover{
 .box {
     position: relative;
     margin: 30px;
-    width: 1100px; /* Set the width of the box */
+    width: 76%; /* Set the width of the box */
     height: 950px; /* Set the height of the box */
     background-color: #ead9b1; /* Set the background color */
     color: rgb(253, 253, 253); /* Set the text color */
@@ -113,7 +113,7 @@ section {
     flex: 5;
     vertical-align: bottom;
     padding: 10px;
-    background-color: #b1aeae;
+    background-color: #afaeb1;
     border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     margin: 10px;
@@ -199,9 +199,8 @@ button:hover {
   
 .logo{
     background-color: white;
-    border-radius: 8%;
-    width: 190px;
-    height: 180px;
+    width: 160px;
+    height: 160px;
     display: flex;
     justify-self: start;
     margin: 10px;
