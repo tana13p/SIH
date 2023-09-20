@@ -106,7 +106,7 @@ function showTextNode(textNodeIndex) {
       options: [
         {
           text: 'Start Game',
-          nextText: 2
+          nextText: 2,
           setState: { gameState: 'state1' },
         },
       ]
