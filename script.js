@@ -20,7 +20,47 @@ document.getElementById('joinCommunity').addEventListener('click', () => {
   
   const textElement = document.getElementById('text')
   const optionButtonsElement = document.getElementById('option-buttons')
-  
+
+const backgroundImages = {
+    state1: "https://cdn1.vectorstock.com/i/1000x1000/84/40/cartoon-living-room-apartment-interior-vector-20598440.jpg",
+    state2: "https://th.bing.com/th/id/OIP.zw42NlJ9-txSrtkwv1I5agHaFP?pid=ImgDet&rs=1",
+    state3: "https://th.bing.com/th/id/R.4976592edae3b5007089344ae3ad93e2?rik=vo6JS2b3W5O3Ng&riu=http%3a%2f%2fclipart-library.com%2fimg%2f1310213.jpg&ehk=6Ssrhz0wJU4fhGYsP%2fy8u9LPFpP%2fUGgNxT9qYBwyS9s%3d&risl=&pid=ImgRaw&r=0",
+    // Add more states and corresponding background images as needed
+};
+function changeBackground(gameState) {
+    const gameBackground = document.getElementById('gameBackground');
+    const backgroundImage = backgroundImages[gameState];
+
+    console.log(`Changing background to: ${backgroundImage}`);
+
+    if (backgroundImage) {
+        gameBackground.style.backgroundImage = `url('${backgroundImage}')`;
+    } else {
+        // Handle cases where no background image is found for a state
+        gameBackground.style.backgroundImage = 'none'; // Set a default background or none
+    }
+}
+function showTextNode(textNodeIndex) {
+    const textNode = textNodes.find(textNode => textNode.id === textNodeIndex);
+    textElement.innerText = textNode.text;
+    while (optionButtonsElement.firstChild) {
+        optionButtonsElement.removeChild(optionButtonsElement.firstChild);
+    }
+
+    textNode.options.forEach(option => {
+        if (showOption(option)) {
+            const button = document.createElement('button');
+            button.innerText = option.text;
+            button.classList.add('btn');
+            button.addEventListener('click', () => {
+                selectOption(option);
+                changeBackground(`state${textNodeIndex}`); // Change background on button click
+            });
+            optionButtonsElement.appendChild(button);
+        }
+    });
+}
+
   let state = {}
   
   function startGame() {
@@ -28,7 +68,7 @@ document.getElementById('joinCommunity').addEventListener('click', () => {
     showTextNode(1)
   }
   
-  function showTextNode(textNodeIndex) {
+  function showTextNodeInternal(textNodeIndex) {
     const textNode = textNodes.find(textNode => textNode.id === textNodeIndex)
     textElement.innerText = textNode.text
     while (optionButtonsElement.firstChild) {
@@ -67,6 +107,7 @@ document.getElementById('joinCommunity').addEventListener('click', () => {
         {
           text: 'Start Game',
           nextText: 2
+          setState: { gameState: 'state1' },
         },
       ]
     },
@@ -76,7 +117,8 @@ document.getElementById('joinCommunity').addEventListener('click', () => {
       options: [
         {
           text: 'Right to Live Free from Violence, \nExploitation, and Abuse',
-          nextText: 3
+          nextText: 3,
+            setState: { gameState: 'state2' }
         },
         {
           text: 'Right to Clean Water',
@@ -127,10 +169,12 @@ document.getElementById('joinCommunity').addEventListener('click', () => {
         {
           text: '"Try to console your parents calmly"',
           nextText: 4,
+            setState: { gameState: 'state3' }
         },
         {
           text: 'Get involved in the fighting and shout at your parents to be quiet"',
           nextText: 5,
+            setState: { gameState: 'state1' }
         },
       ],
     },
