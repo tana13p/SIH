@@ -72,6 +72,7 @@ nav a:hover{
     display: inline-block;
     background-color: #7c818e;
     border-radius: 8px;
+    opacity: 0.85;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     margin: 10px;
     text-align: center;
@@ -183,7 +184,7 @@ button:hover {
     position: relative;
     flex: 1;
     margin: 0 5px;
-    font-size: large;
+    font-size: x-large;
   }
   .btn:hover {
     border-color: black;
@@ -226,6 +227,5 @@ footer a {
     float: left;
     color: white;
 }
-  
 
   
