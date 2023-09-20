@@ -93,6 +93,15 @@ const backgroundImages = {
     state71: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7sDArAW8XV1rxCdqGD5JFNRgIFxuJ6rwSJA&usqp=CAU",
     state72: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXp6wpmQyZsugXwDhDn6BKikvr5hskv20Lxg&usqp=CAU",
     state73: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoeud4L2J4NHXk5bg_O-Qd0G9CDfspB-ScgQ&usqp=CAU",
+    state74: "https://images.app.goo.gl/GjSTL9PA2FpxKK1fA",
+    state75: "https://images.app.goo.gl/NrNrdJyqCR17QzQ9A",
+    state76: "https://images.app.goo.gl/ZiushExPnYj8GvL76",
+    state77: "https://images.app.goo.gl/A14PMythvwEiYyKc6",
+    state78: "https://images.app.goo.gl/pmn1MwDQuYLfr3TDA",
+    state79: "https://images.app.goo.gl/S6MwtpshY3EuD7SX7",
+    state80: "https://images.app.goo.gl/ApPvCxQ8kp9jRWjQ9",
+    state81: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiHqctghAiMuQOWYvvagQl6jOnTplDbu6vwg&usqp=CAU",
+    state82: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdrhE5cPaDZ_wZGV6rwMq_pVej38UM17XpAg&usqp=CAU",
     
 };
 function changeBackground(backgroundImage) {
@@ -1037,184 +1046,239 @@ function showTextNode(textNodeIndex) {
       ]
     },
     {
-      id: 64,
-      text: "Maria wakes up with a passion for science and dreams of becoming a scientist. However, she faces financial challenges that seem insurmountable. What would you like to do?\n1. Start looking for science scholarship opportunities online.\n2. Talk to your school teacher about your dream and ask for guidance.",
+    id: 64,
+    text: "You are Emily, a 10-year-old student in a town with two neighborhoods: the 'Green Hill' neighborhood, where houses are big and beautiful, and the 'Maple Street' neighborhood, where houses are small and run-down. You live in Maple Street, and today, you embark on a quest to address the issue of unequal access to resources and opportunities. You wake up in your modest room, determined to make a difference.",
+    gameState: 'state74',
+        options: [
+      {
+        text: "Have breakfast and head to your school, Maple Street Elementary.",
+        nextText: 65
+      },
+      {
+        text: "Skip school to investigate the differences between the neighborhoods.",
+        nextText: 66
+      }
+    ]
+  },
+  {
+    id: 65,
+    text: "You arrive at Maple Street Elementary, a small school with outdated facilities. As you enter your classroom, your teacher, Mrs. Johnson, greets you.",
+    gameState: 'state75',
       options: [
-        {
-          text: "Start looking for science scholarship opportunities online.",
-          nextText: 65
-        },
-        {
-          text: "Talk to your school teacher about your dream and ask for guidance.",
-          nextText: 66
-        }
-      ]
-    },
-    {
-      id: 65,
-      text: "You begin searching for scholarships that can help you pursue your dream of becoming a scientist.\n1. Apply for a local science scholarship.\n2. Explore online forums for advice on securing educational funding.",
+      {
+        text: "Ask Mrs. Johnson about the school's challenges.",
+        nextText: 67
+      },
+      {
+        text: "Participate in the classroom activities.",
+        nextText: 68
+      },
+      {
+        text: "Sit quietly and observe your classmates.",
+        nextText: 69
+      }
+    ]
+  },
+  {
+    id: 67,
+    text: "Mrs. Johnson explains the lack of books and materials, as well as the cramped classrooms. She believes every child deserves an equal chance.",
+    gameState: 'state76',
       options: [
-        {
-          text: "Apply for a local science scholarship.",
-          nextText: 67
-        },
-        {
-          text: "Explore online forums for advice on securing educational funding.",
-          nextText: 68
-        }
-      ]
-    },
-    {
-      id: 67,
-      text: "You submit your application for a local science scholarship and keep your fingers crossed for a positive response.\n1. Continue searching for more scholarship opportunities.\n2. Reach out to a mentor for guidance on your application.",
+      {
+        text: "Share your concerns with your classmates.",
+        nextText: 70
+      },
+      {
+        text: "Try to organize a school fundraiser to improve conditions.",
+        nextText: 71
+      }
+    ]
+  },
+
+  {
+    id: 70,
+    text: "Your classmates agree that the school needs help. Together, you decide to write letters to parents and the school board to raise awareness about the unequal conditions..",
+    gameState: 'state77',
       options: [
-        {
-          text: "Continue searching for more scholarship opportunities.",
-          nextText: 69
-        },
-        {
-          text: "Reach out to a mentor for guidance on your application.",
-          nextText: 70
-        }
-      ]
-    },
-    {
-      id: 69,
-      text: "You find additional scholarship opportunities and apply to as many as you can.\nCongratulations! Your determination pays off, and you secure a scholarship for your education. You've won the game.",
+      {
+        text: "Write letters to parents and the school board.",
+        nextText: 72
+      },
+      {
+        text: "Organize a meeting with parents and students to discuss improvements.",
+        nextText: 73
+      }
+
+    ]
+  },
+  {
+    id: 72,
+    text: "You and your classmates write heartfelt letters. Some parents respond with support, while others dismiss your concerns.",
+    gameState: 'state78',
       options: [
-        {
-          text: "End",
-          nextText: 2
-        }
-      ]
-    },
-    {
-      id: 70,
-      text: "You seek guidance from a mentor who helps you refine your scholarship application, increasing your chances of success.\nCongratulations! With the mentor's guidance, you secure a scholarship for your education. You've won the game.",
+      {
+        text: "Keep advocating and writing letters.",
+        nextText: 74
+      },
+      {
+        text: "Feel discouraged and give up.",
+        nextText: 75
+      }
+    ]
+  },
+  {
+    id: 74,
+    text: "You continue advocating and writing letters, determined to make a change.\nCongratulations! Emily's quest for equity leads to positive change.",
+    gameState: 'state79',
       options: [
-        {
-          text: "End",
-          nextText: 2
-        }
-      ]
-    },
-    {
-      id: 68,
-      text: "You connect with others who have faced similar challenges and receive valuable advice on finding scholarships and grants.\n1. Apply for scholarships following the advice you received.\n2. Start a crowdfunding campaign to gather support from your community.",
+      {
+        text: "End",
+        nextText: 2
+      }
+    ]
+  },
+  {
+    id: 75,
+    text: "You feel disheartened by the lack of support and give up on your mission. Emily's quest for equity ends in disappointment. Try again?",
+    gameState: 'state80',
+      option: [
+      {
+        text: "Restart",
+        nextText: 72
+      }
+    ]
+  },
+  {
+    id: 73,
+    text: "You organize a meeting with parents and students to discuss improvements. Together, you plan a path towards creating a more equitable environment.\nCongratulations! Emily's quest for equity leads to positive change.",
+    gameState: 'state81',
       options: [
-        {
-          text: "Apply for scholarships following the advice you received.",
-          nextText: 71
-        },
-        {
-          text: "Start a crowdfunding campaign to gather support from your community.",
-          nextText: 72
-        }
-      ]
-    },
-    {
-      id: 71,
-      text: "You apply for scholarships based on the advice from the online forums and increase your chances of success.\nCongratulations! You secure a scholarship for your education. You've won the game.",
+      {
+        text: "End",
+        nextText: 2
+      }
+    ]
+  },
+  {
+    id: 68,
+    text: "You ask Mrs. Johnson for advice on how to address the school's challenges effectively.",
+    gameState: 'state82',
       options: [
-        {
-          text: "End",
-          nextText: 2
-        }
-      ]
-    },
-    {
-      id: 72,
-      text: "You create a crowdfunding campaign and receive support from your community to fund your education.\nCongratulations! Your community comes together to help you pursue your dream. You've won the game.",
+      {
+        text: "Share your concerns with your classmates.",
+        nextText: 76,
+      },
+      {
+        text: "Try to organize a school fundraiser to improve conditions.",
+        nextText: 77,
+      }
+    ]
+  },
+  {
+    id: 76,
+    text: "Your classmates agree that the school needs help. Together, you decide to write letters to parents and the school board to raise awareness about the unequal conditions.\n\n1. Write letters to parents and the school board.\n2. Organize a meeting with parents and students to discuss improvements.",
+    gameState: 'state77',
       options: [
-        {
-          text: "End",
-          nextText: 2
-        }
-      ]
-    },
-    {
-      id: 66,
-      text: "You decide to open up to your school teacher about your dream of becoming a scientist.\n1. Ask your teacher for advice on finding opportunities in science.\n2. Request your teacher to mentor you in your scientific pursuits.",
+      {
+        text: "Write letters to parents and the school board.",
+        nextText: 78
+      },
+      {
+        text: "Organize a meeting with parents and students to discuss improvements.",
+        nextText: 145
+      }
+    ]
+  },
+  {
+    id: 78,
+    text: "You and your classmates write heartfelt letters. Some parents respond with support, while others dismiss your concerns.\n\n1. Keep advocating and writing letters.\n2. Feel discouraged and give up.",
+    gameState: 'state78',
       options: [
-        {
-          text: "Ask your teacher for advice on finding opportunities in science.",
-          nextText: 73
-        },
-        {
-          text: "Request your teacher to mentor you in your scientific pursuits.",
-          nextText: 74
-        }
-      ]
-    },
-    {
-      id: 73,
-      text: "Your teacher provides guidance on how to find opportunities and resources in the field of science.\n1. Follow your teacher's advice and explore local opportunities.\n2. Continue searching for scholarships and grants to reduce financial burdens.",
+      {
+        text: "Keep advocating and writing letters.",
+        nextText: 146
+      },
+      {
+        text: "Feel discouraged and give up.",
+        nextText: 147
+      }
+    ]
+  },
+  {
+    id: 146,
+    text: "You continue advocating and writing letters, determined to make a change.\nCongratulations! Emily's quest for equity leads to positive change.",
+    gameState: 'state79',
       options: [
-        {
-          text: "Follow your teacher's advice and explore local opportunities.",
-          nextText: 75
-        },
-        {
-          text: "Continue searching for scholarships and grants to reduce financial burdens.",
-          nextText: 76
-        }
-      ]
-    },
-    {
-      id: 75,
-      text: "You explore local science programs and discover an internship opportunity that aligns with your dream.\nCongratulations! You find local opportunities and get closer to your dream of becoming a scientist. You've won the game.",
+      {
+        text: "End",
+        nextText: 2
+      }
+    ]
+  },
+  {
+    id: 147,
+    text: "You feel disheartened by the lack of support and give up on your mission.\nEmily's quest for equity ends in disappointment. Try again?",
+   gameState: 'state80',
       options: [
-        {
-          text: "End",
-          nextText: 2
-        }
-      ]
-    },
-    {
-      id: 76,
-      text: "While you appreciate your teacher's advice, you continue seeking scholarships and grants to lessen the financial burden.\n1. Apply for scholarships following your teacher's advice.\n2. Create a crowdfunding campaign to gather additional support.",
+      {
+        text: "End",
+        nextText: 2
+      },
+    ]
+  },
+  {
+    id: 145,
+    text: "You organize a meeting with parents and students to discuss improvements. Together, you plan a path towards creating a more equitable environment.\n\nCongratulations! Emily's quest for equity leads to positive change.",
+    gameState: 'state81',
       options: [
-        {
-          text: "Apply for scholarships following your teacher's advice.",
-          nextText: 77
-        },
-        {
-          text: "Create a crowdfunding campaign to gather additional support.",
-          nextText: 78
-        }
-      ]
-    },
-    {
-      id: 77,
-      text: "You apply for scholarships with your teacher's guidance and secure funding for your education.\nCongratulations! Your hard work and your teacher's support pay off. You've won the game.",
+      {
+        text: "End",
+        nextText: 2
+      }
+    ]
+  },
+  {
+    id: 66,
+    text: "You spend the day exploring both neighborhoods and discover stark differences in resources and opportunities.",
+    gameState: 'state74',
       options: [
-        {
-          text: "End",
-          nextText: 2
-        }
-      ]
-    },
-    {
-      id: 78,
-      text: "You create a crowdfunding campaign and receive support from your extended network.\nCongratulations! Your crowdfunding campaign helps fund your education. You've won the game.",
-      options: [
-        {
-          text: "End",
-          nextText: 2
-        }
-      ]
-    },
-    {
-      id: 74,
-      text: "You ask your teacher to mentor you, hoping to gain valuable insights and support.\nCongratulations! Your teacher becomes your mentor and guides you on your journey to becoming a scientist. You've won the game.",
+      {
+        text: "Decide to attend school tomorrow and share what you've learned.",
+        nextText: 148
+      },
+      {
+        text: "Continue exploring to gather more information.",
+        nextText: 149
+      }
+    ]
+  },
+  {
+    id: 148,
+    text: "You return home, determined to make a change.\nCongratulations! Emily's quest for equity leads to positive change.",
+    gameState: 'state79',
       options:
-        [
-          {
-            text: "End",
-            nextText: 2
-          }
-        ]
-    },
+      [
+        {
+          text: "End",
+          nextText: 2
+        }
+      ]
+  },
+  {
+    id: 149,
+    text: "You continue exploring, gaining more insights into the disparities between the neighborhoods.",
+    gameState: 'state74',
+      options: [
+      {
+        text: "Return home and plan to address the inequality.",
+        nextText: 2
+      },
+      {
+        text: "Keep exploring for more information.",
+        nextText: 2
+      }
+    ]
+  },
     {
       id: 79,
       text: "You are a villager in a community facing a severe issue of malnutrition among children. Your goal is to raise awareness and work towards ensuring that every child has the right to good nutrition for their survival and development. You decide to take action. What would you like to do?",
